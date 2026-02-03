@@ -1402,13 +1402,150 @@ img {
     0%,
     100% {
         transform: translateX(-50%) translateY(0);
-        opacity: 1;
+        opacity: 0.5;
     }
 
     50% {
         transform: translateX(-50%) translateY(10px);
-        opacity: 0.3;
+        opacity: 1;
     }
+}
+
+/* =========================================
+   MOBILE HERO ADJUSTMENTS
+   ========================================= */
+/* =========================================
+   MOBILE HERO ADJUSTMENTS
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. LAYOUT: Visual on Top, Text Below */
+    .hero__content {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .hero__visual {
+        order: -1;
+        width: 100%;
+        height: 380px;
+        /* Dedicated space for the solar system */
+        margin-top: 0;
+        margin-bottom: 20px;
+        overflow: visible;
+        /* Let orbs float freely */
+    }
+
+    /* 2. ORB SIZING & SPACING */
+    .neural-network {
+        transform: scale(0.85);
+        /* Slightly larger scale since we have smaller planets */
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+
+    /* Shrink the Planets so they don't collide */
+    .hero__metric {
+        width: 64px;
+        height: 64px;
+    }
+
+    .hero__metric-value {
+        font-size: 0.9rem;
+    }
+
+    /* Smaller text */
+    .hero__metric-label {
+        font-size: 7px;
+        max-width: 50px;
+    }
+
+    .hero__metric-icon svg {
+        width: 14px;
+        height: 14px;
+        margin-bottom: 4px;
+    }
+
+    /* Spread Rings Further Apart */
+    /* Core ~100px. Radius 50. */
+
+    /* Ring 1: Radius > 90px => Width 180px */
+    .neural-orbit--1 {
+        width: 180px;
+        height: 180px;
+        margin: -90px 0 0 -90px;
+    }
+
+    /* Ring 2: Radius > 145px => Width 290px */
+    .neural-orbit--2 {
+        width: 290px;
+        height: 290px;
+        margin: -145px 0 0 -145px;
+    }
+
+    /* Ring 3: Radius > 200px => Width 400px */
+    .neural-orbit--3 {
+        width: 400px;
+        height: 400px;
+        margin: -200px 0 0 -200px;
+    }
+
+    /* 3. TEXT ALIGNMENT */
+    .hero__text {
+        text-align: center;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .hero__headline {
+        font-size: 2.2rem;
+        /* Slightly smaller for mobile fit */
+        line-height: 1.2;
+    }
+
+    .hero__ctas {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 24px;
+    }
+
+    /* Stats Line Contrast */
+    .hero__trust {
+        font-size: 0.85rem;
+        color: #64748b;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .hero__trust span {
+        white-space: nowrap;
+    }
+
+    .hero__trust-dot {
+        display: none;
+    }
+}
+
+0%,
+100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+50% {
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0.3;
+}
 }
 
 /* ─────────────── Logo Marquee Section ─────────────── */
