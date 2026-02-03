@@ -1,0 +1,291 @@
+/* =========================================
+   CONCEPT SHOWCASE STYLES
+   ========================================= */
+
+/* General Section Container */
+.concept-section {
+    padding: 80px 20px;
+    min-height: 600px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.concept-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #0f172a;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 100;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   CONCEPT 1: NEURAL GRAPH
+   ========================================= */
+#concept-neural {
+    background: #0f172a;
+    color: #fff;
+}
+
+#neural-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.neural-overlay {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    /* Let clicks pass to canvas */
+    text-align: center;
+}
+
+/* =========================================
+   CONCEPT 2: HOLOGRAPHIC CYLINDER
+   ========================================= */
+#concept-holo {
+    background: #000;
+    color: #00ffff;
+    perspective: 1000px;
+}
+
+.holo-carousel {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateHolo 20s infinite linear;
+    margin-top: 50px;
+}
+
+.holo-carousel:hover {
+    animation-play-state: paused;
+}
+
+.holo-item {
+    position: absolute;
+    width: 280px;
+    height: 180px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    text-align: center;
+    flex-direction: column;
+}
+
+.holo-desc {
+    font-size: 0.8rem;
+    opacity: 0;
+    margin-top: 10px;
+    transition: opacity 0.3s;
+    color: #fff;
+}
+
+.holo-item:hover .holo-desc {
+    opacity: 1;
+}
+
+@keyframes rotateHolo {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* =========================================
+   CONCEPT 3: COMMAND TERMINAL
+   ========================================= */
+#concept-terminal {
+    background: #1e1e1e;
+    font-family: 'Courier New', monospace;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0;
+    flex-direction: row;
+}
+
+.terminal-split {
+    display: flex;
+    width: 100%;
+    height: 600px;
+}
+
+.terminal-left {
+    width: 40%;
+    background: #111;
+    padding: 40px;
+    border-right: 1px solid #333;
+    overflow-y: auto;
+}
+
+.terminal-right {
+    width: 60%;
+    background: #1e1e1e;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cmd-line {
+    color: #0f0;
+    margin-bottom: 15px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.cmd-line:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.cmd-line::before {
+    content: '> ';
+}
+
+.terminal-output {
+    background: #252526;
+    border: 1px solid #3e3e42;
+    padding: 20px;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: none;
+    /* Hidden by default */
+}
+
+.terminal-output.active {
+    display: block;
+    animation: terminalFadeIn 0.3s ease;
+}
+
+@keyframes terminalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   CONCEPT 4: SENTIENT ORBS
+   ========================================= */
+#concept-orbs {
+    background: #fff;
+    /* Mesh gradient bg */
+    background-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+        radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+}
+
+.orbs-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.orb-wrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: crosshair;
+}
+
+.orb {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: orbMorph 8s ease-in-out infinite;
+    position: absolute;
+    filter: blur(10px);
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+
+.orb-wrapper:nth-child(2) .orb {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    animation-delay: -2s;
+}
+
+.orb-wrapper:nth-child(3) .orb {
+    background: linear-gradient(135deg, #ec4899, #f43f5e);
+    animation-delay: -4s;
+}
+
+.orb-wrapper:last-child .orb {
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    animation-delay: -5s;
+}
+
+.orb-wrapper:hover .orb {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    /* Stabilize */
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.orb-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.orb-wrapper:hover .orb-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes orbMorph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}

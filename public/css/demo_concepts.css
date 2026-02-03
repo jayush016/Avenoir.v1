@@ -1,0 +1,461 @@
+/* --- SPLIT TERMINAL STYLES --- */
+.section-split {
+    background: #000;
+}
+
+.split-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.split-pillar {
+    flex: 1;
+    position: relative;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Smooth aggressive ease */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+.split-pillar:last-child {
+    border-right: none;
+}
+
+/* Dynamic Backgrounds */
+.pillar-left {
+    background: #020617;
+}
+
+.pillar-right {
+    background: #0f172a;
+}
+
+.pillar-bg-anim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+/* Interaction Logic */
+.split-wrapper:hover .split-pillar {
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+
+/* Dim others */
+.split-wrapper .split-pillar:hover {
+    flex: 1.8;
+    /* Expand */
+    opacity: 1;
+    filter: grayscale(0%);
+    background: #0B1121;
+    /* Slightly lighter */
+}
+
+.split-pillar:hover .pillar-bg-anim {
+    opacity: 1;
+}
+
+.pillar-content {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    max-width: 500px;
+    transition: transform 0.5s;
+}
+
+.p-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    filter: grayscale(1);
+    transition: filter 0.3s;
+}
+
+.split-pillar:hover .p-icon {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.p-mode {
+    font-family: 'Fira Code';
+    color: #38bdf8;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.p-header h2 {
+    font-family: 'Space Grotesk';
+    font-size: 3rem;
+    margin: 0 0 30px;
+    line-height: 1;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.p-body {
+    font-size: 1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s 0.1s;
+}
+
+/* Reveal on hover */
+.split-pillar:hover .p-body {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.p-list {
+    margin: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.p-list div {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 15px;
+}
+
+.p-list span {
+    color: #38bdf8;
+    font-family: 'Fira Code';
+}
+
+.p-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    text-transform: uppercase;
+    font-family: 'Fira Code';
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.p-btn:hover {
+    background: #38bdf8;
+    color: #000;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+
+/* ROSTER (Right Side Special) */
+.roster-preview {
+    background: rgba(16, 185, 129, 0.05);
+    /* Emerald tint */
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.roster-head {
+    font-size: 0.7rem;
+    color: #10b981;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.roster-item {
+    font-family: 'Fira Code';
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.r-dot {
+    width: 6px;
+    height: 6px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #10b981;
+    animation: blink 2s infinite;
+}
+
+
+/* --- TURBINE UPDATES --- */
+.turbine-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.turbine-core {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform: rotateX(60deg) rotateZ(0deg);
+    animation: spinCore 20s linear infinite;
+}
+
+.CoreRing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.Ring1 {
+    width: 100%;
+    height: 100%;
+    border-style: dashed;
+    animation: spin 10s linear infinite reverse;
+}
+
+.Ring2 {
+    width: 160%;
+    height: 160%;
+    border-color: rgba(168, 85, 247, 0.3);
+    animation: spin 15s linear infinite;
+}
+
+.Ring3 {
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(circle, #38bdf8 0%, transparent 70%);
+    opacity: 0.3;
+}
+
+.CoreLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(-60deg);
+    /* Counteract parent */
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.spoke {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 2px;
+    transform-origin: 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.s1 {
+    transform: rotate(0deg);
+}
+
+.s2 {
+    transform: rotate(90deg);
+}
+
+.s3 {
+    transform: rotate(180deg);
+}
+
+.s4 {
+    transform: rotate(270deg);
+}
+
+.spoke-line {
+    width: 100px;
+    height: 1px;
+    background: rgba(56, 189, 248, 0.2);
+}
+
+.spoke-line.active {
+    background: #38bdf8;
+    box-shadow: 0 0 10px #38bdf8;
+}
+
+.spoke-content {
+    transform: rotateX(-60deg);
+    /* Face camera */
+    min-width: 180px;
+}
+
+.s1 .spoke-content {
+    transform: rotate(-0deg) rotateX(-60deg);
+}
+
+/* Keep upright */
+/* Note: Complex 3D requires JS for perfect upright billboard, simplified here */
+
+@keyframes spinCore {
+    from {
+        transform: rotateX(60deg) rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateX(60deg) rotateZ(360deg);
+    }
+}
+
+
+/* --- NEURAL UPDATES --- */
+.neural-system {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.connections {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.path-line {
+    fill: none;
+    stroke: #334155;
+    stroke-width: 2px;
+    stroke-dasharray: 10;
+    animation: dash 60s linear infinite;
+}
+
+.n-node {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 250px;
+}
+
+.n-dot {
+    width: 20px;
+    height: 20px;
+    background: #0f172a;
+    border: 2px solid #38bdf8;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    position: relative;
+}
+
+.main-dot {
+    background: #38bdf8;
+    box-shadow: 0 0 40px #38bdf8;
+}
+
+.particle-system {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pt {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.pt1 {
+    animation: orbit 2s infinite linear;
+}
+
+.pt2 {
+    animation: orbit 3s infinite linear reverse;
+}
+
+
+/* --- CONTINUUM UPDATES --- */
+.continuum-track {
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.laser-beam {
+    width: 100%;
+    height: 2px;
+    background: #334155;
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+}
+
+.laser-beam::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    animation: beam 3s infinite ease-in-out;
+}
+
+.glass-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.g-step {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 22%;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.g-step:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.active-step {
+    border-color: #38bdf8;
+    box-shadow: 0 10px 40px rgba(56, 189, 248, 0.1);
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+@keyframes beam {
+    0% {
+        left: -20%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}

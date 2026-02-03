@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avenoir - Engagement Concepts v2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/demo_concepts.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* Shared Content Styles */
+        body {
+            margin: 0;
+            background: #020617;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .demo-nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(2, 6, 23, 0.9);
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #38bdf8;
+        }
+
+        .concept-section {
+            min-height: 100vh;
+            border-bottom: 1px solid #1e293b;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .concept-label {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            color: #64748b;
+            border: 1px solid #334155;
+            padding: 5px 12px;
+            border-radius: 4px;
+            z-index: 10;
+        }
+
+        /* Common Content Classes */
+        .q-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            padding: 20px;
+            border-radius: 12px;
+            /* box-shadow: 0 10px 30px rgba(0,0,0,0.5); */
+        }
+
+        .q-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 5px;
+        }
+
+        .q-desc {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin: 0 0 10px;
+            line-height: 1.5;
+        }
+
+        .q-pill {
+            font-size: 0.7rem;
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            font-family: 'Fira Code';
+        }
+
+        .staffing-highlight {
+            border: 1px dashed #38bdf8;
+            background: rgba(56, 189, 248, 0.05);
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        .staffing-highlight strong {
+            display: block;
+            color: #38bdf8;
+            font-size: 0.8rem;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="demo-nav">
+        <a href="#split" class="nav-link">01. Split Terminal (New)</a>
+        <a href="#turbine" class="nav-link">02. Quantum Engine</a>
+        <a href="#neural" class="nav-link">03. Neural Net</a>
+        <a href="#continuum" class="nav-link">04. Continuum</a>
+    </nav>
+
+
+    <!-- OPTION 4: SPLIT TERMINAL (The "Choose Your Player" Interaction) -->
+    <section id="split" class="concept-section section-split">
+        <div class="concept-label">OPTION 01: THE BINARY CHOICE</div>
+
+        <div class="split-wrapper">
+            <!-- Left Pillar: PROCESS (Architect) -->
+            <div class="split-pillar pillar-architect">
+                <div class="pillar-content">
+                    <div class="p-icon">📐</div>
+                    <div class="p-header">
+                        <span class="p-mode">MODE: ARCHITECT</span>
+                        <h2>Managed Solutions</h2>
+                    </div>
+                    <div class="p-body">
+                        <p>We own the outcome. Comprehensive system design using our <strong>Quantum Delivery
+                                Protocol</strong>.</p>
+                        <div class="p-list">
+                            <div><span>01</span> Technical Debt Audit</div>
+                            <div><span>02</span> High-Availability Architecture</div>
+                            <div><span>03</span> Predictive Scaling</div>
+                        </div>
+                        <button class="p-btn">Initialize Project</button>
+                    </div>
+                </div>
+                <div class="pillar-bg-anim"></div>
+            </div>
+
+            <!-- Right Pillar: STAFFING (Augment) -->
+            <div class="split-pillar pillar-augment">
+                <div class="pillar-content">
+                    <div class="p-icon">⚡</div>
+                    <div class="p-header">
+                        <span class="p-mode">MODE: AUGMENT</span>
+                        <h2>Dedicated Resources</h2>
+                    </div>
+                    <div class="p-body">
+                        <p>Inject raw power. Deploy <strong>Top 1% Engineering Talent</strong> directly into your
+                            workflow.</p>
+
+                        <!-- The "Roster" Hook -->
+                        <div class="roster-preview">
+                            <div class="roster-head">LIVE AVAILABILITY</div>
+                            <div class="roster-item">
+                                <span class="r-dot"></span> Salesforce Architect (12y Exp)
+                            </div>
+                            <div class="roster-item">
+                                <span class="r-dot"></span> SAP HANA Lead (8y Exp)
+                            </div>
+                            <div class="roster-item">
+                                <span class="r-dot"></span> Mulesoft Specialist (Senior)
+                            </div>
+                        </div>
+
+                        <button class="p-btn">Deploy Talent</button>
+                    </div>
+                </div>
+                <div class="pillar-bg-anim"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- OPTION 1: TURBINE (Updated Text) -->
+    <section id="turbine" class="concept-section section-turbine">
+        <div class="concept-label">OPTION 02: THE QUANTUM ENGINE</div>
+        <div class="turbine-container">
+            <div class="turbine-core">
+                <div class="CoreRing Ring1"></div>
+                <div class="CoreRing Ring2"></div>
+                <div class="CoreRing Ring3"></div>
+                <div class="CoreLabel">QUANTUM<br>CORE</div>
+
+                <!-- Spokes -->
+                <div class="spoke s1">
+                    <div class="spoke-line"></div>
+                    <div class="q-card spoke-content">
+                        <div class="q-title">Forensics</div>
+                        <div class="q-desc">Deep-state technical audit.</div>
+                    </div>
+                </div>
+                <div class="spoke s2">
+                    <div class="spoke-line"></div>
+                    <div class="q-card spoke-content">
+                        <div class="q-title">Blueprint</div>
+                        <div class="q-desc">Scalable System Design.</div>
+                    </div>
+                </div>
+                <div class="spoke s3 main">
+                    <div class="spoke-line active"></div>
+                    <div class="q-card spoke-content active-card">
+                        <div class="q-title">Execution</div>
+                        <div class="staffing-highlight">
+                            <strong>VELOCITY INJECTION</strong>
+                            <div class="q-desc">Deploying 50+ Tier-1 Experts.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTION 2: NEURAL (Updated Text & Particles) -->
+    <section id="neural" class="concept-section section-neural">
+        <div class="concept-label">OPTION 03: THE NEURAL NETWORK</div>
+        <div class="neural-system">
+            <!-- SVG Connections -->
+            <svg class="connections" width="100%" height="100%">
+                <path d="M200,250 L500,150 L800,250 L1100,150" class="path-line"></path>
+            </svg>
+
+            <!-- Node 1 -->
+            <div class="n-node p1">
+                <div class="n-dot"></div>
+                <div class="q-card n-card">
+                    <div class="q-title">Diagnostic</div>
+                    <div class="q-desc">Decoding bottlenecks.</div>
+                </div>
+            </div>
+
+            <!-- Node 2 -->
+            <div class="n-node p2">
+                <div class="n-dot"></div>
+                <div class="q-card n-card">
+                    <div class="q-title">Strategy</div>
+                    <div class="q-desc">Neural Blueprinting.</div>
+                </div>
+            </div>
+
+            <!-- Node 3 (Staffing Cluster) -->
+            <div class="n-node p3">
+                <div class="n-dot main-dot">
+                    <div class="particle-system">
+                        <div class="pt pt1"></div>
+                        <div class="pt pt2"></div>
+                        <div class="pt pt3"></div>
+                    </div>
+                </div>
+                <div class="q-card n-card main-card">
+                    <div class="q-title">Augmentation</div>
+                    <div class="staffing-highlight">
+                        <strong>RESOURCE CLUSTER</strong>
+                        <div class="q-desc">Injecting Top 1% Global Talent.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTION 3: CONTINUUM (Glass) -->
+    <section id="continuum" class="concept-section section-continuum">
+        <div class="concept-label">OPTION 04: THE CONTINUUM</div>
+        <div class="continuum-track">
+            <div class="laser-beam"></div>
+
+            <div class="glass-steps">
+                <div class="g-step">
+                    <div class="step-idx">01</div>
+                    <h3>Audit</h3>
+                    <p>Forensics</p>
+                </div>
+                <div class="g-step">
+                    <div class="step-idx">02</div>
+                    <h3>Design</h3>
+                    <p>Blueprint</p>
+                </div>
+                <div class="g-step active-step">
+                    <div class="step-idx">03</div>
+                    <h3>Deploy</h3>
+                    <div class="staffing-highlight" style="border-color: #fff; background: rgba(255,255,255,0.1);">
+                        <strong>EXPERT INJECTION</strong>
+                        <div class="q-desc" style="color: #cbd5e1;">50+ Enterprise Architects</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

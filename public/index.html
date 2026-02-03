@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Avenoir - AI-powered development that delivers faster, smarter, and leaner. Build better products in less time.">
+    <title>Avenoir - Build Faster. Ship Smarter.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=45">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="/" class="header__logo">Avenoir<span>.</span></a>
+            <nav class="header__nav">
+                <ul class="header__nav-list" id="nav-menu">
+                    <li><a href="/" class="header__nav-link active">Home</a></li>
+                    <li><a href="services.html" class="header__nav-link">Services</a></li>
+                    <li><a href="about.html" class="header__nav-link">About</a></li>
+                    <li><a href="case-studies.html" class="header__nav-link">Work</a></li>
+                    <li><a href="careers.html" class="header__nav-link">Careers</a></li>
+                </ul>
+                <a href="#contact" class="header__cta">Let's Talk</a>
+                <button class="header__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section: Transformation Split -->
+        <section class="hero">
+            <!-- Background: Subtle split gradient -->
+            <div class="hero__bg">
+                <div class="hero__bg-left"></div>
+                <div class="hero__bg-right"></div>
+                <div class="hero__bg-blend"></div>
+                <!-- Subtle floating particles -->
+                <div class="hero__particles">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+
+            <div class="container hero__content">
+                <div class="hero__text">
+                    <!-- AI Badge with sparkle animation -->
+                    <div class="hero__badge">
+                        <span class="hero__badge-ai">
+                            <svg class="ai-sparkle" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <!-- Main sparkle -->
+                                <path class="sparkle-main"
+                                    d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z"
+                                    fill="currentColor" />
+                                <!-- Small sparkles -->
+                                <circle class="sparkle-dot sparkle-dot--1" cx="19" cy="5" r="1.5" fill="currentColor" />
+                                <circle class="sparkle-dot sparkle-dot--2" cx="5" cy="18" r="1" fill="currentColor" />
+                                <circle class="sparkle-dot sparkle-dot--3" cx="20" cy="18" r="1.2"
+                                    fill="currentColor" />
+                            </svg>
+                            <span class="ai-pulse"></span>
+                            <span class="ai-pulse ai-pulse--2"></span>
+                        </span>
+                        AI-Powered Delivery
+                    </div>
+
+                    <!-- Main headline -->
+                    <h1 class="hero__headline">
+                        We deliver
+                        <span class="hero__rotating">
+                            <span class="hero__rotating-track">
+                                <span>Salesforce</span>
+                                <span>SAP</span>
+                                <span>AI Solutions</span>
+                                <span>Data Engineering</span>
+                                <span>Cloud Platforms</span>
+                                <span>Salesforce</span>
+                            </span>
+                        </span>
+                        <br>that drive results.
+                    </h1>
+
+                    <!-- Subheadline - outcome-focused with AI narrative -->
+                    <p class="hero__subheadline">
+                        Enterprise-grade implementation with AI at every step.
+                        From strategy to deployment—faster, smarter, leaner.
+                    </p>
+
+                    <!-- Trust signals - subtle -->
+                    <div class="hero__trust">
+                        <span>50+ Certified Experts</span>
+                        <span class="hero__trust-dot"></span>
+                        <span>Enterprise-Grade Delivery</span>
+                        <span class="hero__trust-dot"></span>
+                        <span>Proven Track Record</span>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="hero__ctas">
+                        <a href="#contact" class="btn btn--primary">Get a Consultation</a>
+                        <a href="services.html" class="btn btn--ghost">Explore Services</a>
+                    </div>
+                </div>
+
+                <!-- Right side: Neural Network AI Visual -->
+                <div class="hero__visual">
+                    <!-- Neural Network Container -->
+                    <div class="neural-network">
+                        <!-- Core brain/processor with Avenoir branding -->
+                        <div class="neural-core">
+                            <div class="neural-core__inner">
+                                <span class="neural-core__text">Avenoir</span>
+                            </div>
+                            <div class="neural-core__pulse"></div>
+                        </div>
+
+                        <!-- Interconnected nodes -->
+                        <div class="neural-nodes">
+                            <div class="neural-node" style="--delay: 0s; --x: -120px; --y: -80px;"></div>
+                            <div class="neural-node" style="--delay: 0.5s; --x: 100px; --y: -100px;"></div>
+                            <div class="neural-node" style="--delay: 1s; --x: 140px; --y: 20px;"></div>
+                            <div class="neural-node" style="--delay: 1.5s; --x: 80px; --y: 120px;"></div>
+                            <div class="neural-node" style="--delay: 2s; --x: -100px; --y: 100px;"></div>
+                            <div class="neural-node" style="--delay: 2.5s; --x: -150px; --y: 10px;"></div>
+                        </div>
+
+                        <!-- Connection lines (SVG) -->
+                        <svg class="neural-connections" viewBox="-200 -150 400 300">
+                            <defs>
+                                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.2" />
+                                    <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.2" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Connection paths -->
+                            <path class="neural-line" d="M0,0 Q-60,-40 -120,-80" />
+                            <path class="neural-line" d="M0,0 Q50,-50 100,-100" />
+                            <path class="neural-line" d="M0,0 Q70,10 140,20" />
+                            <path class="neural-line" d="M0,0 Q40,60 80,120" />
+                            <path class="neural-line" d="M0,0 Q-50,50 -100,100" />
+                            <path class="neural-line" d="M0,0 Q-75,5 -150,10" />
+                            <!-- Cross connections -->
+                            <path class="neural-line neural-line--secondary" d="M-120,-80 Q0,-90 100,-100" />
+                            <path class="neural-line neural-line--secondary" d="M140,20 Q110,70 80,120" />
+                            <path class="neural-line neural-line--secondary" d="M-100,100 Q-125,55 -150,10" />
+                        </svg>
+
+                        <!-- Flowing data particles -->
+                        <div class="data-particles">
+                            <span class="data-particle" style="--path: 1; --duration: 2s;"></span>
+                            <span class="data-particle" style="--path: 2; --duration: 2.5s;"></span>
+                            <span class="data-particle" style="--path: 3; --duration: 1.8s;"></span>
+                            <span class="data-particle" style="--path: 4; --duration: 2.2s;"></span>
+                            <span class="data-particle" style="--path: 5; --duration: 3s;"></span>
+                            <span class="data-particle" style="--path: 6; --duration: 2.8s;"></span>
+                        </div>
+
+                        <!-- Orbiting rings -->
+                        <div class="neural-orbit neural-orbit--1"></div>
+                        <div class="neural-orbit neural-orbit--2"></div>
+                        <div class="neural-orbit neural-orbit--3"></div>
+                    </div>
+
+                    <!-- Floating metrics -->
+                    <div class="hero__metrics">
+                        <div class="hero__metric hero__metric--1">
+                            <span class="hero__metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12,6 12,12 16,14" />
+                                </svg>
+                            </span>
+                            <span class="hero__metric-value">3x</span>
+                            <span class="hero__metric-label">Faster Delivery</span>
+                        </div>
+                        <div class="hero__metric hero__metric--2">
+                            <span class="hero__metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                </svg>
+                            </span>
+                            <span class="hero__metric-value">40%</span>
+                            <span class="hero__metric-label">Cost Savings</span>
+                        </div>
+                        <div class="hero__metric hero__metric--3">
+                            <span class="hero__metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </span>
+                            <span class="hero__metric-value">50+</span>
+                            <span class="hero__metric-label">Happy Clients</span>
+                        </div>
+                        <div class="hero__metric hero__metric--4">
+                            <span class="hero__metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22,4 12,14.01 9,11.01" />
+                                </svg>
+                            </span>
+                            <span class="hero__metric-value">100+</span>
+                            <span class="hero__metric-label">Projects Delivered</span>
+                        </div>
+                        <div class="hero__metric hero__metric--5">
+                            <span class="hero__metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                </svg>
+                            </span>
+                            <span class="hero__metric-value">95%</span>
+                            <span class="hero__metric-label">Client Retention</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="hero__scroll">
+                <span></span>
+            </div>
+        </section>
+
+        <!-- Client Logo Marquee Section -->
+        <section class="logos-section logos-section--seamless">
+            <div class="container">
+                <p class="logos-section__label">Our Clients</p>
+            </div>
+            <div class="logos-marquee">
+                <div class="logos-marquee__track">
+                    <!-- First set of logos -->
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/accolite.png" alt="Accolite" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/aldar.png" alt="ALDAR" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/absa.png" alt="Absa" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/damac.png" alt="DAMAC" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/hcltech.png" alt="HCLTech" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/hunterdouglas.png" alt="HunterDouglas" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/infobeans.png" alt="InfoBeans" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/parador.png" alt="Parador" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/rightrev.png" alt="RightRev" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/turing.png" alt="Turing" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/usaid.png" alt="USAID" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/verasolutions.png" alt="Vera Solutions" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/cloudsmith.png" alt="Cloudsmith" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/miiint.png" alt="Miiint Solutions" loading="lazy">
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/accolite.png" alt="Accolite" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/aldar.png" alt="ALDAR" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/absa.png" alt="Absa" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/damac.png" alt="DAMAC" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/hcltech.png" alt="HCLTech" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/hunterdouglas.png" alt="HunterDouglas" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/infobeans.png" alt="InfoBeans" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/parador.png" alt="Parador" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/rightrev.png" alt="RightRev" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/turing.png" alt="Turing" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/usaid.png" alt="USAID" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/verasolutions.png" alt="Vera Solutions" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/cloudsmith.png" alt="Cloudsmith" loading="lazy">
+                    </div>
+                    <div class="logos-marquee__item">
+                        <img src="images/logos/miiint.png" alt="Miiint Solutions" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Case Studies Section -->
+        <section class="case-studies" id="work">
+            <div class="container">
+                <div class="case-studies__header">
+                    <span class="case-studies__eyebrow">Our Work</span>
+                    <h2 class="case-studies__title">Transforming Enterprises with Intelligent Solutions</h2>
+                    <p class="case-studies__subtitle">Real results from real partnerships. See how we've helped leading
+                        organizations achieve their goals.</p>
+                </div>
+
+                <div class="case-studies__grid">
+                    <!-- Featured Case Study -->
+                    <article class="case-card case-card--featured">
+                        <!-- AI Neural Network Animation -->
+                        <div class="case-card__ai-overlay">
+                            <div class="ai-particle" style="--delay: 0s; --x: 20%; --y: 30%;"></div>
+                            <div class="ai-particle" style="--delay: 0.5s; --x: 80%; --y: 20%;"></div>
+                            <div class="ai-particle" style="--delay: 1s; --x: 60%; --y: 70%;"></div>
+                            <div class="ai-particle" style="--delay: 1.5s; --x: 30%; --y: 80%;"></div>
+                            <div class="ai-particle" style="--delay: 2s; --x: 90%; --y: 50%;"></div>
+                            <svg class="ai-connections" viewBox="0 0 400 300">
+                                <line class="ai-line" x1="80" y1="90" x2="320" y2="60" />
+                                <line class="ai-line" x1="320" y1="60" x2="240" y2="210" />
+                                <line class="ai-line" x1="240" y1="210" x2="120" y2="240" />
+                                <line class="ai-line" x1="120" y1="240" x2="80" y2="90" />
+                                <line class="ai-line" x1="80" y1="90" x2="240" y2="210" />
+                            </svg>
+                        </div>
+                        <div class="case-card__badge">Featured</div>
+                        <div class="case-card__header">
+                            <img src="images/logos/usaid.png" alt="USAID" class="case-card__logo">
+                            <span class="case-card__industry">Government & NGO</span>
+                        </div>
+                        <h3 class="case-card__title">Streamlining Global Aid Distribution with Salesforce</h3>
+                        <p class="case-card__challenge">USAID needed a unified platform to track aid programs across
+                            100+ countries with real-time reporting and compliance monitoring.</p>
+                        <div class="case-card__metrics">
+                            <div class="case-card__metric">
+                                <span class="case-card__metric-value" data-count="40">0</span><span
+                                    class="case-card__metric-suffix">%</span>
+                                <span class="case-card__metric-label">Faster Reporting</span>
+                            </div>
+                            <div class="case-card__metric">
+                                <span class="case-card__metric-value" data-count="100">0</span><span
+                                    class="case-card__metric-suffix">+</span>
+                                <span class="case-card__metric-label">Countries Connected</span>
+                            </div>
+                            <div class="case-card__metric">
+                                <span class="case-card__metric-value" data-count="3">0</span><span
+                                    class="case-card__metric-suffix">x</span>
+                                <span class="case-card__metric-label">ROI Achieved</span>
+                            </div>
+                        </div>
+                        <blockquote class="case-card__quote">
+                            "Avenoir transformed how we manage global operations. The visibility we now have is
+                            game-changing."
+                        </blockquote>
+                        <a href="#" class="case-card__cta">Read Full Case Study <span>→</span></a>
+                    </article>
+
+                    <!-- Smaller Case Studies -->
+                    <div class="case-studies__stack">
+                        <article class="case-card case-card--small">
+                            <div class="case-card__header">
+                                <img src="images/logos/hcltech.png" alt="HCLTech" class="case-card__logo">
+                                <span class="case-card__industry">Technology</span>
+                            </div>
+                            <h3 class="case-card__title">Enterprise Salesforce Integration</h3>
+                            <div class="case-card__metrics">
+                                <div class="case-card__metric">
+                                    <span class="case-card__metric-value" data-count="50">0</span><span
+                                        class="case-card__metric-suffix">%</span>
+                                    <span class="case-card__metric-label">Cost Reduction</span>
+                                </div>
+                            </div>
+                            <a href="#" class="case-card__cta">View Case Study <span>→</span></a>
+                        </article>
+
+                        <article class="case-card case-card--small">
+                            <div class="case-card__header">
+                                <img src="images/logos/verasolutions.png" alt="Vera Solutions" class="case-card__logo">
+                                <span class="case-card__industry">Non-Profit Tech</span>
+                            </div>
+                            <h3 class="case-card__title">Data Migration & Process Automation</h3>
+                            <div class="case-card__metrics">
+                                <div class="case-card__metric">
+                                    <span class="case-card__metric-value" data-count="99">0</span><span
+                                        class="case-card__metric-suffix">.9%</span>
+                                    <span class="case-card__metric-label">Data Accuracy</span>
+                                </div>
+                            </div>
+                            <a href="#" class="case-card__cta">View Case Study <span>→</span></a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="case-studies__footer">
+                    <a href="#" class="btn btn--outline">View All Case Studies</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Services Section: System Core Hybrid -->
+        <section class="services-section system-core-section" id="services">
+            <div class="system-core-container">
+                <div class="services__header">
+                    <span class="services__eyebrow">The Core</span>
+                    <h2 class="services__title magnetic-text">Intelligent Service Architecture</h2>
+                </div>
+
+                <div class="system-core-grid">
+                    <!-- Left: Holographic 3D Carousel -->
+                    <div class="holo-display">
+                        <div class="holo-carousel-stage" id="holoCarousel">
+                            <!-- Card 1: Salesforce -->
+                            <div class="holo-card" data-service="salesforce"
+                                style="transform: rotateY(0deg) translateZ(220px);">
+                                <div class="service-card__icon-wrapper">
+                                    <svg class="service-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                                    </svg>
+                                </div>
+                                <h3>Salesforce</h3>
+                                <span>CRM & Cloud</span>
+                            </div>
+
+                            <!-- Card 2: Data Engineering -->
+                            <div class="holo-card" data-service="data"
+                                style="transform: rotateY(90deg) translateZ(220px);">
+                                <div class="service-card__icon-wrapper">
+                                    <svg class="service-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12V7l-9-5-9 5v5" />
+                                        <path d="M21 7l-9 5-9-5" />
+                                        <path d="M9 17l-9-5" />
+                                        <path d="M21 17l-9 5" />
+                                    </svg>
+                                </div>
+                                <h3>Data Engineering</h3>
+                                <span>Pipelines & Warehousing</span>
+                            </div>
+
+                            <!-- Card 3: AI & Analytics -->
+                            <div class="holo-card" data-service="ai"
+                                style="transform: rotateY(180deg) translateZ(220px);">
+                                <div class="service-card__icon-wrapper">
+                                    <svg class="service-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 2a10 10 0 1 0 10 10H12V2z" />
+                                        <path d="M12 2a10 10 0 0 1 10 10" />
+                                        <path d="M12 12 2.1 12.1" />
+                                    </svg>
+                                </div>
+                                <h3>AI & Analytics</h3>
+                                <span>Predictive Intelligence</span>
+                            </div>
+
+                            <!-- Card 4: SAP -->
+                            <div class="holo-card" data-service="sap"
+                                style="transform: rotateY(270deg) translateZ(220px);">
+                                <div class="service-card__icon-wrapper">
+                                    <svg class="service-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M3 21h18" />
+                                        <path d="M5 21V7l8-4 8 4v14" />
+                                        <path d="M13 21V11l-4-2" />
+                                    </svg>
+                                </div>
+                                <h3>SAP Solutions</h3>
+                                <span>Enterprise ERP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Command Terminal -->
+                    <div class="cmd-terminal">
+                        <div class="cmd-header">
+                            <div class="cmd-title">AVENOIR_CORE_SYSTEM // v4.2</div>
+                            <div class="cmd-status">
+                                <span class="cmd-status-dot"></span> LIVE MONITORING
+                            </div>
+                        </div>
+                        <div class="cmd-content" id="terminalContent">
+                            <div class="cmd-line">
+                                <span class="cmd-prompt">></span> SYSTEM_INIT... [COMPLETE]
+                            </div>
+                            <div class="cmd-line">
+                                <span class="cmd-prompt">></span> AWAITING_MODULE_SELECTION...
+                            </div>
+                            <div class="cmd-line">
+                                <span class="cmd-prompt">></span> _<span class="cmd-cursor"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bridge CTA: System Output -->
+                <div class="system-cta-wrapper">
+                    <a href="#contact" class="btn btn--system">
+                        <span class="btn-text">Initialize System Architecture</span>
+                        <span class="btn-glow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <!-- SPLIT TERMINAL SECTION (Binary Choice) -->
+        <section id="split-terminal" class="split-section" style="background-color: #020617; position: relative;">
+
+            <div class="split-container">
+
+                <!-- PILLAR 1: MANAGED SOLUTIONS (Process) -->
+                <div class="split-pillar pillar-left">
+                    <div class="pillar-bg"></div>
+                    <div class="pillar-content">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <div class="pillar-header">
+                            <span class="pillar-eyebrow">MODE: ARCHITECT</span>
+                            <h2>Managed Solutions</h2>
+                        </div>
+                        <div class="pillar-body">
+                            <p>End-to-end delivery using the <strong>Quantum Delivery Protocol</strong>. We take full
+                                ownership of the roadmap, architecture, and deployment.</p>
+                            <ul class="pillar-features">
+                                <li><span>01</span> Technical Debt Audit</li>
+                                <li><span>02</span> High-Availability Architecture</li>
+                                <li><span>03</span> Predictive Scaling</li>
+                            </ul>
+                            <a href="#contact" class="btn-pillar">Initialize Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PILLAR 2: DEDICATED TEAMS (Staffing) -->
+                <div class="split-pillar pillar-right">
+                    <div class="pillar-bg"></div>
+                    <div class="pillar-content">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <div class="pillar-header">
+                            <span class="pillar-eyebrow">MODE: AUGMENT</span>
+                            <h2>Dedicated Resources</h2>
+                        </div>
+                        <div class="pillar-body">
+                            <p>Inject raw speed into your existing workflow. Deploy <strong>Top 1% Engineering
+                                    Talent</strong> (Salesforce, SAP, Mulesoft) within 48 hours.</p>
+
+                            <!-- THE TECH TICKER (Vertical Mini) -->
+                            <div class="mini-ticker">
+                                <div class="ticker-item">● Salesforce Architect (Available)</div>
+                                <div class="ticker-item">● Data Engineer Lead (Available)</div>
+                                <div class="ticker-item">● Mulesoft Specialist (Available)</div>
+                            </div>
+
+                            <a href="#contact" class="btn-pillar">Deploy Talent</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- UNIFIED COMMAND CENTER (Footer + Contact) -->
+    <footer id="contact" class="footer-unified">
+        <div class="container">
+            <div class="unified-grid">
+
+                <!-- LEFT PANEL: System Info -->
+                <div class="footer-panel-left">
+                    <div class="footer__grid-compact">
+                        <!-- Brand -->
+                        <div class="footer__col">
+                            <a href="/" class="footer__logo">Avenoir<span>.</span></a>
+                            <p class="footer__desc">
+                                Engineering intelligence for the next generation of enterprise.
+                            </p>
+                            <div class="footer__socials">
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Links Stack -->
+                        <div class="footer__col">
+                            <h4 class="footer__heading">System Links</h4>
+                            <ul class="footer__links">
+                                <li><a href="#">Managed Teams</a></li>
+                                <li><a href="#">Staff Augmentation</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Status Module -->
+                    <div class="system-status-wrapper">
+                        <div class="system-status">
+                            <span class="status-dot"></span>
+                            <span class="status-text">All Systems Operational</span>
+                        </div>
+                        <div class="footer__location">San Francisco • Bangalore</div>
+                    </div>
+
+                    <div class="footer__bottom-mini">
+                        <p>&copy; 2026 Avenoir.</p>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+
+                <!-- RIGHT PANEL: Terminal Form -->
+                <div class="footer-panel-right">
+                    <div class="contact-terminal terminal-embedded">
+                        <div class="terminal-header">
+                            <div class="terminal-dots"><span></span><span></span><span></span></div>
+                            <div class="terminal-title">ENCRYPTED_TRANSMISSION</div>
+                        </div>
+
+                        <div class="terminal-body">
+                            <div class="terminal-prompt-line">
+                                <span class="prompt-user">visitor@avenoir:~$</span>
+                                <span class="prompt-cmd">contact_us -now</span>
+                            </div>
+
+                            <form class="terminal-form" action="#" method="POST">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Work Email</label>
+                                        <input type="email" id="email" name="email" placeholder="name@company.com"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="type">Protocol</label>
+                                    <select id="type" name="type">
+                                        <option value="managed">Build a Project</option>
+                                        <option value="staff">Hire Developers</option>
+                                        <option value="consult">General Inquiry</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="3"
+                                        placeholder="Tell us about your project..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn-terminal-submit">
+                                    <span class="btn-glitch-text">Send Message</span>
+                                    <span class="btn-brackets">→</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=3"></script>
+</body>
+
+</html>
