@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=52">
+    <link rel="stylesheet" href="css/styles.css?v=72">
 </head>
 
 <body>
@@ -24,9 +24,10 @@
                 <ul class="header__nav-list" id="nav-menu">
                     <li><a href="/" class="header__nav-link active">Home</a></li>
                     <li><a href="services.html" class="header__nav-link">Services</a></li>
+                    <li><a href="case-studies.html" class="header__nav-link">Case Studies</a></li>
                     <li><a href="about.html" class="header__nav-link">About</a></li>
-                    <li><a href="case-studies.html" class="header__nav-link">Work</a></li>
-                    <li><a href="careers.html" class="header__nav-link">Careers</a></li>
+                    <li><a href="careers.html" class="header__nav-link">Career</a></li>
+                    <li><a href="blog.html" class="header__nav-link">Blog</a></li>
                 </ul>
                 <a href="#contact" class="header__cta">Let's Talk</a>
                 <button class="header__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
@@ -51,29 +52,83 @@
                 </div>
             </div>
 
+            <!-- Floating AI Robot (at hero level for full traversal) -->
+            <div class="hero__robot" id="aiRobot">
+                <svg viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Antenna with glowing tip -->
+                    <line x1="50" y1="8" x2="50" y2="20" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" />
+                    <circle cx="50" cy="5" r="5" fill="#22d3ee">
+                        <animate attributeName="r" values="5;7;5" dur="1.5s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite" />
+                    </circle>
+
+                    <!-- Head (rounded rectangle) -->
+                    <rect x="20" y="20" width="60" height="45" rx="12" fill="url(#robotHeadGrad)" />
+                    <!-- Visor/Screen -->
+                    <rect x="28" y="30" width="44" height="20" rx="6" fill="#0f172a" />
+                    <!-- Eyes (glowing) -->
+                    <circle cx="38" cy="40" r="5" fill="#22d3ee">
+                        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="62" cy="40" r="5" fill="#22d3ee">
+                        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"
+                            begin="0.3s" />
+                    </circle>
+                    <!-- Mouth LED -->
+                    <rect x="42" y="55" width="16" height="4" rx="2" fill="#22d3ee" opacity="0.7" />
+
+                    <!-- Body (main torso) -->
+                    <rect x="18" y="68" width="64" height="50" rx="10" fill="url(#robotBodyGrad)" />
+
+                    <!-- AI Badge on Chest (LARGER) -->
+                    <rect x="32" y="75" width="36" height="22" rx="6" fill="#0f172a" />
+                    <text x="50" y="92" text-anchor="middle" fill="#22d3ee" font-size="16" font-weight="bold"
+                        font-family="Inter, sans-serif">AI</text>
+
+                    <!-- Chest details -->
+                    <circle cx="28" cy="86" r="4" fill="#818cf8" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="72" cy="86" r="4" fill="#818cf8" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"
+                            begin="1.5s" />
+                    </circle>
+
+                    <!-- Arms -->
+                    <rect x="4" y="72" width="12" height="35" rx="6" fill="url(#robotArmGrad)" />
+                    <rect x="84" y="72" width="12" height="35" rx="6" fill="url(#robotArmGrad)" />
+                    <!-- Hands -->
+                    <circle cx="10" cy="110" r="7" fill="#a5b4fc" />
+                    <circle cx="90" cy="110" r="7" fill="#a5b4fc" />
+
+                    <!-- Legs -->
+                    <rect x="28" y="118" width="14" height="20" rx="5" fill="url(#robotLegGrad)" />
+                    <rect x="58" y="118" width="14" height="20" rx="5" fill="url(#robotLegGrad)" />
+
+                    <!-- Gradients -->
+                    <defs>
+                        <linearGradient id="robotHeadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#e0e7ff" />
+                            <stop offset="100%" stop-color="#c7d2fe" />
+                        </linearGradient>
+                        <linearGradient id="robotBodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#c7d2fe" />
+                            <stop offset="100%" stop-color="#a5b4fc" />
+                        </linearGradient>
+                        <linearGradient id="robotArmGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#a5b4fc" />
+                            <stop offset="100%" stop-color="#818cf8" />
+                        </linearGradient>
+                        <linearGradient id="robotLegGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#818cf8" />
+                            <stop offset="100%" stop-color="#6366f1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
             <div class="container hero__content">
                 <div class="hero__text">
-                    <!-- AI Badge with sparkle animation -->
-                    <div class="hero__badge">
-                        <span class="hero__badge-ai">
-                            <svg class="ai-sparkle" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <!-- Main sparkle -->
-                                <path class="sparkle-main"
-                                    d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z"
-                                    fill="currentColor" />
-                                <!-- Small sparkles -->
-                                <circle class="sparkle-dot sparkle-dot--1" cx="19" cy="5" r="1.5" fill="currentColor" />
-                                <circle class="sparkle-dot sparkle-dot--2" cx="5" cy="18" r="1" fill="currentColor" />
-                                <circle class="sparkle-dot sparkle-dot--3" cx="20" cy="18" r="1.2"
-                                    fill="currentColor" />
-                            </svg>
-                            <span class="ai-pulse"></span>
-                            <span class="ai-pulse ai-pulse--2"></span>
-                        </span>
-                        AI-Powered Delivery
-                    </div>
-
-                    <!-- Main headline -->
                     <!-- Main headline -->
                     <!-- PREVIOUS: We deliver [Rotating] that drive results. -->
                     <h1 class="hero__headline">
@@ -88,7 +143,7 @@
                                 <span>Salesforce</span>
                             </span>
                         </span>
-                        <br>engineered for speed and ROI.
+                        <br><span class="hero__headline-sub">engineered for speed and ROI.</span>
                     </h1>
 
                     <!-- Subheadline - outcome-focused with AI narrative -->
@@ -342,60 +397,66 @@
         <section class="case-studies" id="work">
             <div class="container">
                 <div class="case-studies__header">
-                    <span class="case-studies__eyebrow">Our Work</span>
-                    <h2 class="case-studies__title">Transforming Enterprises with Intelligent Solutions</h2>
-                    <p class="case-studies__subtitle">Real results from real partnerships. See how we've helped leading
-                        organizations achieve their goals.</p>
+                    <span class="case-studies__eyebrow">Engineered for Stability</span>
+                    <h2 class="case-studies__title">Building Cert<span class="text-ai" data-text="ai">ai</span>nty in an
+                        Uncertain
+                        Market</h2>
+                    <p class="case-studies__subtitle">While others pause, our partners accelerate. Explore how we use AI
+                        and speed to turn market volatility into a competitive advantage.</p>
                 </div>
 
                 <div class="case-studies__grid">
                     <!-- Featured Case Study -->
                     <article class="case-card case-card--featured">
-                        <!-- AI Neural Network Animation -->
-                        <div class="case-card__ai-overlay">
-                            <div class="ai-particle" style="--delay: 0s; --x: 20%; --y: 30%;"></div>
-                            <div class="ai-particle" style="--delay: 0.5s; --x: 80%; --y: 20%;"></div>
-                            <div class="ai-particle" style="--delay: 1s; --x: 60%; --y: 70%;"></div>
-                            <div class="ai-particle" style="--delay: 1.5s; --x: 30%; --y: 80%;"></div>
-                            <div class="ai-particle" style="--delay: 2s; --x: 90%; --y: 50%;"></div>
-                            <svg class="ai-connections" viewBox="0 0 400 300">
-                                <line class="ai-line" x1="80" y1="90" x2="320" y2="60" />
-                                <line class="ai-line" x1="320" y1="60" x2="240" y2="210" />
-                                <line class="ai-line" x1="240" y1="210" x2="120" y2="240" />
-                                <line class="ai-line" x1="120" y1="240" x2="80" y2="90" />
-                                <line class="ai-line" x1="80" y1="90" x2="240" y2="210" />
-                            </svg>
-                        </div>
-                        <div class="case-card__badge">Featured</div>
                         <div class="case-card__header">
                             <img src="images/logos/usaid.png" alt="USAID" class="case-card__logo">
-                            <span class="case-card__industry">Government & NGO</span>
-                        </div>
-                        <h3 class="case-card__title">Streamlining Global Aid Distribution with Salesforce</h3>
-                        <p class="case-card__challenge">USAID needed a unified platform to track aid programs across
-                            100+ countries with real-time reporting and compliance monitoring.</p>
-                        <div class="case-card__metrics">
-                            <div class="case-card__metric">
-                                <span class="case-card__metric-value" data-count="40">0</span><span
-                                    class="case-card__metric-suffix">%</span>
-                                <span class="case-card__metric-label">Faster Reporting</span>
-                            </div>
-                            <div class="case-card__metric">
-                                <span class="case-card__metric-value" data-count="100">0</span><span
-                                    class="case-card__metric-suffix">+</span>
-                                <span class="case-card__metric-label">Countries Connected</span>
-                            </div>
-                            <div class="case-card__metric">
-                                <span class="case-card__metric-value" data-count="3">0</span><span
-                                    class="case-card__metric-suffix">x</span>
-                                <span class="case-card__metric-label">ROI Achieved</span>
+                            <div class="case-card__badges">
+                                <div class="case-card__badge">Featured</div>
+                                <span class="case-card__industry">Government & NGO</span>
                             </div>
                         </div>
-                        <blockquote class="case-card__quote">
-                            "Avenoir transformed how we manage global operations. The visibility we now have is
-                            game-changing."
-                        </blockquote>
-                        <a href="#" class="case-card__cta">Read Full Case Study <span>→</span></a>
+                        <div class="case-card__content">
+                            <!-- AI Neural Network Animation -->
+                            <div class="case-card__ai-overlay">
+                                <div class="ai-particle" style="--delay: 0s; --x: 20%; --y: 30%;"></div>
+                                <div class="ai-particle" style="--delay: 0.5s; --x: 80%; --y: 20%;"></div>
+                                <div class="ai-particle" style="--delay: 1s; --x: 60%; --y: 70%;"></div>
+                                <div class="ai-particle" style="--delay: 1.5s; --x: 30%; --y: 80%;"></div>
+                                <div class="ai-particle" style="--delay: 2s; --x: 90%; --y: 50%;"></div>
+                                <svg class="ai-connections" viewBox="0 0 400 300">
+                                    <line class="ai-line" x1="80" y1="90" x2="320" y2="60" />
+                                    <line class="ai-line" x1="320" y1="60" x2="240" y2="210" />
+                                    <line class="ai-line" x1="240" y1="210" x2="120" y2="240" />
+                                    <line class="ai-line" x1="120" y1="240" x2="80" y2="90" />
+                                    <line class="ai-line" x1="80" y1="90" x2="240" y2="210" />
+                                </svg>
+                            </div>
+                            <h3 class="case-card__title">Streamlining Global Aid Distribution with Salesforce</h3>
+                            <p class="case-card__challenge">USAID needed a unified platform to track aid programs across
+                                100+ countries with real-time reporting and compliance monitoring.</p>
+                            <div class="case-card__metrics">
+                                <div class="case-card__metric">
+                                    <span class="case-card__metric-value" data-count="40">0</span><span
+                                        class="case-card__metric-suffix">%</span>
+                                    <span class="case-card__metric-label">Faster Reporting</span>
+                                </div>
+                                <div class="case-card__metric">
+                                    <span class="case-card__metric-value" data-count="100">0</span><span
+                                        class="case-card__metric-suffix">+</span>
+                                    <span class="case-card__metric-label">Countries Connected</span>
+                                </div>
+                                <div class="case-card__metric">
+                                    <span class="case-card__metric-value" data-count="3">0</span><span
+                                        class="case-card__metric-suffix">x</span>
+                                    <span class="case-card__metric-label">ROI Achieved</span>
+                                </div>
+                            </div>
+                            <blockquote class="case-card__quote">
+                                "Avenoir transformed how we manage global operations. The visibility we now have is
+                                game-changing."
+                            </blockquote>
+                            <a href="#" class="case-card__cta">Read Full Case Study <span>→</span></a>
+                        </div>
                     </article>
 
                     <!-- Smaller Case Studies -->
@@ -597,11 +658,45 @@
                             <p>Inject raw speed into your existing workflow. Deploy <strong>Top 1% Engineering
                                     Talent</strong> (Salesforce, SAP, Mulesoft) within 48 hours.</p>
 
-                            <!-- THE TECH TICKER (Vertical Mini) -->
-                            <div class="mini-ticker">
-                                <div class="ticker-item">● Salesforce Architect (Available)</div>
-                                <div class="ticker-item">● Data Engineer Lead (Available)</div>
-                                <div class="ticker-item">● Mulesoft Specialist (Available)</div>
+                            <!-- DOMAIN EXPERTISE GRID -->
+                            <div class="domain-grid">
+                                <div class="domain-item">
+                                    <span class="domain-name">Salesforce</span>
+                                    <span class="domain-expertise">CPQ · Omnistudio · Marketing Cloud · Commerce
+                                        Cloud</span>
+                                </div>
+                                <div class="domain-item">
+                                    <span class="domain-name">Mulesoft</span>
+                                    <span class="domain-expertise">Integration Specialists · API Development</span>
+                                </div>
+                                <div class="domain-item">
+                                    <span class="domain-name">SAP</span>
+                                    <span class="domain-expertise">ABAP · SD · MM · FICO · HANA · SuccessFactors</span>
+                                </div>
+                                <div class="domain-item">
+                                    <span class="domain-name">ServiceNow</span>
+                                    <span class="domain-expertise">ITSM · ITOM · Developers · Admins</span>
+                                </div>
+                                <div class="domain-item">
+                                    <span class="domain-name">MS Dynamics 365</span>
+                                    <span class="domain-expertise">CRM · ERP (F&O, CE) · Power Platform</span>
+                                </div>
+                                <div class="domain-item">
+                                    <span class="domain-name">DevOps & Cloud</span>
+                                    <span class="domain-expertise">AWS · Azure · CI/CD · Docker · Kubernetes</span>
+                                </div>
+                                <div class="domain-item">
+                                    <span class="domain-name">QA & Automation</span>
+                                    <span class="domain-expertise">Selenium · Cypress · Playwright</span>
+                                </div>
+                                <div class="domain-item">
+                                    <span class="domain-name">RPA</span>
+                                    <span class="domain-expertise">UiPath · Automation Anywhere · Blue Prism</span>
+                                </div>
+                                <div class="domain-item">
+                                    <span class="domain-name">AEM</span>
+                                    <span class="domain-expertise">Front-end · Back-end · Architects</span>
+                                </div>
                             </div>
 
                             <a href="#contact" class="btn-pillar">Deploy Talent</a>
@@ -639,11 +734,10 @@
                                         <circle cx="4" cy="4" r="2"></circle>
                                     </svg>
                                 </a>
-                                <a href="#" class="social-link" aria-label="Twitter">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <a href="#" class="social-link" aria-label="X">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
                                         <path
-                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                                        </path>
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                                     </svg>
                                 </a>
                             </div>
@@ -653,27 +747,41 @@
                         <div class="footer__col">
                             <h4 class="footer__heading">System Links</h4>
                             <ul class="footer__links">
-                                <li><a href="#">Managed Teams</a></li>
-                                <li><a href="#">Staff Augmentation</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="careers.html">Careers</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="case-studies.html">Case Studies</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="careers.html">Career</a></li>
+                                <li><a href="blog.html">Blog</a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Status Module -->
-                    <div class="system-status-wrapper">
+                    <!-- Contact Info -->
+                    <div class="footer__contact-info">
+                        <div class="footer__contact-block">
+                            <h4 class="footer__heading">📍 Headquarters</h4>
+                            <p class="footer__contact-text">
+                                2nd floor, Indralok Apartment<br>
+                                Civil Lines, Raipur, CG 492001
+                            </p>
+                        </div>
+                        <div class="footer__contact-block">
+                            <h4 class="footer__heading">✉️ Email Us</h4>
+                            <a href="mailto:team@avenoir.ai" class="footer__email">team@avenoir.ai</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__bottom-mini">
+                        <div class="footer__bottom-left">
+                            <p>&copy; 2026 Avenoir.</p>
+                            <a href="#">Privacy</a>
+                            <a href="#">Terms</a>
+                        </div>
                         <div class="system-status">
                             <span class="status-dot"></span>
                             <span class="status-text">All Systems Operational</span>
                         </div>
-                        <div class="footer__location">San Francisco • Bangalore</div>
-                    </div>
-
-                    <div class="footer__bottom-mini">
-                        <p>&copy; 2026 Avenoir.</p>
-                        <a href="#">Privacy</a>
-                        <a href="#">Terms</a>
                     </div>
                 </div>
 
@@ -692,37 +800,61 @@
                             </div>
 
                             <form class="terminal-form" action="#" method="POST">
+                                <!-- Value Proposition -->
+                                <div class="form-value-prop">
+                                    <span class="value-prop-text">Get a free consultation & custom proposal</span>
+                                </div>
+
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" id="firstName" name="firstName" placeholder="John" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Work Email</label>
-                                        <input type="email" id="email" name="email" placeholder="name@company.com"
-                                            required>
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="type">Protocol</label>
-                                    <select id="type" name="type">
-                                        <option value="managed">Build a Project</option>
-                                        <option value="staff">Hire Developers</option>
-                                        <option value="consult">General Inquiry</option>
-                                    </select>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Work Email</label>
+                                        <input type="email" id="email" name="email" placeholder="john@company.com"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Contact Number</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                                    </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" name="message" rows="3"
-                                        placeholder="Tell us about your project..."></textarea>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="company">Company</label>
+                                        <input type="text" id="company" name="company" placeholder="Your Company Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="intent">Intent</label>
+                                        <select id="intent" name="intent">
+                                            <option value="project">Build a Project</option>
+                                            <option value="hire">Hire Developers</option>
+                                            <option value="consult">Technical Consulting</option>
+                                            <option value="other">General Inquiry</option>
+                                        </select>
+                                    </div>
                                 </div>
 
                                 <button type="submit" class="btn-terminal-submit">
-                                    <span class="btn-glitch-text">Send Message</span>
+                                    <span class="btn-glitch-text">Get Free Consultation</span>
                                     <span class="btn-brackets">→</span>
                                 </button>
+
+                                <!-- Micro-copy & Trust Signals -->
+                                <div class="form-trust-signals">
+                                    <span class="trust-item">100% Secure</span>
+                                    <span class="trust-item">Response in 24hrs</span>
+                                    <span class="trust-item">No commitment</span>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -732,7 +864,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=3"></script>
+    <script src="js/main.js?v=5"></script>
 </body>
 
 </html>

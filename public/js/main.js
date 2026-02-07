@@ -192,8 +192,27 @@ document.addEventListener('DOMContentLoaded', function () {
         staggerItems.forEach(el => staggerObserver.observe(el));
     }
 
-    // ========== 3D Tilt Effect (Services) ==========
-    const tiltCards = document.querySelectorAll('.service-card');
+    // ========== Case Studies Staggered Reveal ==========
+    const caseCards = document.querySelectorAll('.case-card');
+    if (caseCards.length > 0) {
+        const caseCardObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger the reveal by card position
+                    const cardIndex = Array.from(caseCards).indexOf(entry.target);
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, cardIndex * 150);
+                    caseCardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        caseCards.forEach(el => caseCardObserver.observe(el));
+    }
+
+    // ========== 3D Tilt Effect (Services + Case Cards) ==========
+    const tiltCards = document.querySelectorAll('.service-card, .case-card');
 
     tiltCards.forEach(card => {
         card.addEventListener('mousemove', handleTilt);
@@ -211,10 +230,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateX = ((y - centerY) / centerY) * -5; // Max 5deg tilt
-        const rotateY = ((x - centerX) / centerX) * 5;
+        // Subtle tilt for premium feel
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 4;
 
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        card.style.transition = 'transform 0.1s ease-out';
     }
 
     function resetTilt() {
@@ -340,6 +361,53 @@ document.addEventListener('DOMContentLoaded', function () {
                 el.style.transform = `translateY(${scrolled * speed}px)`;
             });
         });
+    }
+
+    // ========== AI Robot Random Movement ==========
+    const aiRobot = document.getElementById('aiRobot');
+
+    if (aiRobot) {
+        // Define zones where robot can move
+        // left/top as percentages within hero section
+        const zones = [
+            // Left side (behind text area)
+            { left: [5, 25], top: [10, 70], behind: true },
+            // Center-left (transition zone)
+            { left: [25, 40], top: [10, 80], behind: Math.random() > 0.5 },
+            // Center (in front of everything)
+            { left: [35, 55], top: [5, 85], behind: false },
+            // Right side (solar system area)
+            { left: [50, 75], top: [10, 80], behind: false },
+            // Far right
+            { left: [70, 90], top: [5, 70], behind: false },
+            // Top area
+            { left: [20, 80], top: [0, 20], behind: false },
+        ];
+
+        function moveRobotRandomly() {
+            // Pick a random zone
+            const zone = zones[Math.floor(Math.random() * zones.length)];
+
+            // Random position within that zone
+            const left = zone.left[0] + Math.random() * (zone.left[1] - zone.left[0]);
+            const top = zone.top[0] + Math.random() * (zone.top[1] - zone.top[0]);
+
+            // Apply position
+            aiRobot.style.left = left + '%';
+            aiRobot.style.top = top + '%';
+
+            // Random z-index (behind or in front)
+            const goBehind = zone.behind || Math.random() > 0.7;
+            aiRobot.classList.remove('behind', 'front');
+            aiRobot.classList.add(goBehind ? 'behind' : 'front');
+
+            // Random next movement time (3-8 seconds)
+            const nextMove = 3000 + Math.random() * 5000;
+            setTimeout(moveRobotRandomly, nextMove);
+        }
+
+        // Start after a short delay
+        setTimeout(moveRobotRandomly, 1000);
     }
 
 });
